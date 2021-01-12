@@ -1,0 +1,18 @@
+// Задание
+// Дополни функцию makeMessage так, чтобы она ожидала вторым параметром
+// (параметр callback) колбэк - функцию и возвращала ее вызов.
+// Функция deliverPizza или makePizza будет передаваться
+// как колбэк и ожидатьаргументом имя готовой доставляемой пиццы.
+
+function deliverPizza(pizzaName) {
+  return `Доставляем пиццу ${pizzaName}.`;
+}
+
+function makePizza(pizzaName) {
+  return `Пицца ${pizzaName} готовится, ожидайте...`;
+}
+
+// Пиши код ниже этой строки
+function makeMessage(pizzaName, callback) {
+  return callback(pizzaName);
+}

@@ -1,17 +1,20 @@
-const atTheOldToad = {
-    potions: [
-        { name: 'Зелье скорости', price: 460 },
-        { name: 'Дыхание дракона', price: 780 },
-        { name: 'Каменная кожа', price: 520 },
-    ],
+// Задание
+// Дополни код так, чтобы в переменной result был результат выполнения функции
+// makePizza, а в переменной pointer была ссылка на функцию makePizza.
 
-    getObj() {
-        console.log(this.potions[0].name)
-  }
-       
+// function makePizza() {
+//   return 'Ваша пицца готовится, ожидайте.';
+// }
+// // Пиши код ниже этой строки
 
+// const result = null;
+// const pointer = null;
+
+function makePizza() {
+  return 'Ваша пицца готовится, ожидайте.';
 }
+// Пиши код ниже этой строки
 
-atTheOldToad.getObj();
-
+const result = makePizza();
+const pointer = makePizza;
 
