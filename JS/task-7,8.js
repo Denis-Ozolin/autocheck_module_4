@@ -1,4 +1,4 @@
-// Задание
+// Задание 7
 // Сервису приготовления и доставки еды требуется
 // функция генерации сообщений о статусе заказа.
 
@@ -21,7 +21,31 @@ const orders = [
 ];
 
 function composeMessage(position) {
-return console.log(`Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`);
+  return console.log(`Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`);
 }
 
-const messages = orders.map(composeMessage.call(0));
+// const messages = orders.map(message => (composeMessage.call(message,
+// orders.indexOf(message) + 1)));
+
+const messages = orders.map((order, index) => (composeMessage.call(order,
+index + 1)));
+
+
+// Задание 8
+// Выполни рефакторинг кода так, чтобы функция composeMessage(position)
+// вызывалась методом apply.
+
+// const orders = [
+//   { email: 'solomon@topmail.ua', dish: 'Burger' },
+//   { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//   { email: 'jacob@mail.com', dish: 'Taco' },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = orders.map((order, index) =>
+//   composeMessage.apply(order,[index + 1])
+// );
